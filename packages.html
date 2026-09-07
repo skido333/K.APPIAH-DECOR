@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Packages & Pricing | K.Appiah Decor</title>
+  <meta name="description" content="Explore K.Appiah Decor's furniture packages — starter, classic, luxury and full home bundles. Call 0247104145 for a custom quote."/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --walnut:#4A2C0A; --walnut-mid:#6B3F14; --walnut-light:#9B6B3A;
+  --cream:#F8F2E8; --cream-dark:#EDE4D3; --gold:#C8964A; --gold-light:#E8B86A;
+  --charcoal:#2A2018; --warm-gray:#8A7A68; --white:#FEFCF8;
+  --fd:'Playfair Display',Georgia,serif; --fb:'Cormorant Garamond',Georgia,serif; --fu:'Jost',sans-serif;
+  --nav-h:76px; --tr:0.35s cubic-bezier(0.4,0,0.2,1);
+  --sm:0 2px 12px rgba(74,44,10,.10); --md:0 8px 32px rgba(74,44,10,.16); --lg:0 20px 60px rgba(74,44,10,.22);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--charcoal);font-family:var(--fb);line-height:1.75;overflow-x:hidden}
+a{text-decoration:none;color:inherit} ul{list-style:none} img{max-width:100%;display:block}
+
+.container{width:min(1200px,92%);margin-inline:auto}
+.lbl{font-family:var(--fu);font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.75rem}
+.ttl{font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--walnut);line-height:1.2}
+.sub{font-family:var(--fb);font-size:1.1rem;color:var(--warm-gray);margin-top:.9rem}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--fu);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.88rem 2rem;border-radius:2px;border:2px solid transparent;cursor:pointer;transition:var(--tr)}
+.btn-dark{background:var(--walnut);color:var(--cream);border-color:var(--walnut)} .btn-dark:hover{background:var(--walnut-mid);transform:translateY(-2px);box-shadow:var(--md)}
+.btn-gold{background:var(--gold);color:var(--walnut);border-color:var(--gold)} .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:var(--md)}
+.btn-ol{background:transparent;color:var(--walnut);border-color:var(--walnut)} .btn-ol:hover{background:var(--walnut);color:var(--cream)}
+.btn-full{width:100%;justify-content:center}
+
+/* Preloader */
+#pre{position:fixed;inset:0;background:var(--walnut);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity .6s,visibility .6s}
+#pre.gone{opacity:0;visibility:hidden}
+.pre-logo{font-family:var(--fd);font-size:2.1rem;color:var(--cream);margin-bottom:1.8rem} .pre-logo span{color:var(--gold)}
+.pre-bar{width:170px;height:2px;background:rgba(255,255,255,.15);border-radius:1px;overflow:hidden}
+.pre-bar::after{content:'';display:block;width:0;height:100%;background:var(--gold);animation:lb 1.7s ease forwards}
+@keyframes lb{to{width:100%}}
+
+/* Navbar */
+#nav{position:fixed;top:0;width:100%;height:var(--nav-h);z-index:1000;transition:var(--tr)}
+#nav.s{background:rgba(248,242,232,.96);backdrop-filter:blur(14px);box-shadow:var(--sm)}
+.ni{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between}
+.nl{display:flex;flex-direction:column;line-height:1}
+.nl-m{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--white);transition:var(--tr)} .nl-m span{color:var(--gold)}
+.nl-s{font-family:var(--fu);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-light);transition:var(--tr)}
+#nav.s .nl-m{color:var(--walnut)} #nav.s .nl-s{color:var(--walnut-light)}
+.nlinks{display:flex;gap:2rem;align-items:center}
+.nlinks a{font-family:var(--fu);font-size:.79rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,242,232,.9);transition:var(--tr);position:relative}
+.nlinks a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:var(--tr)}
+.nlinks a:hover::after,.nlinks a.act::after{width:100%}
+#nav.s .nlinks a{color:var(--walnut)}
+.ncta{background:var(--gold)!important;color:var(--walnut)!important;padding:.5rem 1.4rem;border-radius:2px;font-weight:600!important}
+.ncta::after{display:none!important} .ncta:hover{background:var(--gold-light)!important}
+.ntog{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.ntog span{display:block;width:26px;height:2px;background:var(--cream);transition:var(--tr);border-radius:1px}
+#nav.s .ntog span{background:var(--walnut)}
+.nmob{position:fixed;top:var(--nav-h);left:0;width:100%;background:var(--white);padding:1.5rem 2rem;transform:translateY(-110%);transition:var(--tr);box-shadow:var(--md);z-index:999}
+.nmob.o{transform:translateY(0)}
+.nmob a{display:block;font-family:var(--fu);font-size:.93rem;letter-spacing:.1em;text-transform:uppercase;color:var(--walnut);padding:.8rem 0;border-bottom:1px solid var(--cream-dark);transition:var(--tr)}
+.nmob a:hover{color:var(--gold);padding-left:6px}
+
+/* Hero */
+#hero{min-height:62vh;background:linear-gradient(135deg,var(--charcoal) 0%,var(--walnut) 60%,var(--walnut-mid) 100%);display:flex;align-items:center;padding-top:var(--nav-h);position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 50%);background-size:22px 22px}
+#hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 70% 50%,rgba(200,150,74,.14) 0%,transparent 70%)}
+.hi{position:relative;z-index:1;padding:5rem 0;text-align:center}
+.heb{display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:1.5rem;animation:fu .8s .2s both}
+.heb::before,.heb::after{content:'';width:40px;height:1px;background:var(--gold)}
+.heb span{font-family:var(--fu);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.ht{font-family:var(--fd);font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;color:var(--cream);line-height:1.15;margin-bottom:1.2rem;animation:fu .8s .35s both}
+.ht em{font-style:italic;color:var(--gold);display:block}
+.hs{font-family:var(--fb);font-size:1.2rem;color:rgba(248,242,232,.7);max-width:560px;margin:0 auto 2.5rem;animation:fu .8s .5s both}
+.hbadges{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fu .8s .65s both}
+.hbadge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(200,150,74,.15);border:1px solid rgba(200,150,74,.35);color:var(--gold-light);font-family:var(--fu);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;padding:.45rem 1rem;border-radius:100px}
+
+/* Toggle bar */
+#togbar{background:var(--walnut);padding:1.8rem 0;text-align:center;border-bottom:1px solid rgba(200,150,74,.2)}
+.tw{display:inline-flex;align-items:center;gap:1rem;background:rgba(0,0,0,.25);padding:.5rem 1.5rem;border-radius:100px}
+.tlbl{font-family:var(--fu);font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(248,242,232,.55);cursor:pointer;transition:var(--tr)}
+.tlbl.on{color:var(--gold)}
+.tsw{width:50px;height:26px;background:var(--gold);border-radius:13px;position:relative;cursor:pointer;transition:var(--tr);border:none;outline:none}
+.tsw::after{content:'';position:absolute;width:20px;height:20px;background:var(--walnut);border-radius:50%;top:3px;left:3px;transition:var(--tr)}
+.tsw.ann::after{left:27px}
+.tsave{font-family:var(--fu);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(200,150,74,.15);padding:.25rem .75rem;border-radius:100px;border:1px solid rgba(200,150,74,.3)}
+
+/* Filter tabs */
+.filters{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.fb{font-family:var(--fu);font-size:.77rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1.4rem;border-radius:100px;border:1px solid var(--cream-dark);background:var(--white);color:var(--warm-gray);cursor:pointer;transition:var(--tr)}
+.fb:hover,.fb.on{background:var(--walnut);color:var(--cream);border-color:var(--walnut)}
+
+/* Packages section */
+#pkgs{padding:6rem 0;background:var(--cream)}
+.ph{text-align:center;margin-bottom:4rem}
+.ph .sub{max-width:580px;margin-inline:auto}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;align-items:start}
+
+/* Package card */
+.pc{background:var(--white);border-radius:6px;overflow:hidden;border:1px solid var(--cream-dark);box-shadow:var(--sm);transition:var(--tr);position:relative;display:none}
+.pc.show{display:block}
+.pc:hover{transform:translateY(-6px);box-shadow:var(--lg)}
+.pc.feat{border-color:var(--gold);transform:scale(1.03)}
+.pc.feat:hover{transform:scale(1.03) translateY(-6px)}
+.pbadge{position:absolute;top:1.2rem;right:1.2rem;font-family:var(--fu);font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.3rem .85rem;border-radius:100px}
+.bp{background:var(--gold);color:var(--walnut)} .bn{background:#2ecc71;color:#fff} .bv{background:var(--walnut);color:var(--cream)}
+.phead{padding:2.2rem 2rem 1.5rem;border-bottom:1px solid var(--cream-dark)}
+.pico{font-size:2.4rem;margin-bottom:1rem}
+.pname{font-family:var(--fd);font-size:1.5rem;font-weight:700;color:var(--walnut);margin-bottom:.3rem}
+.ptag{font-family:var(--fb);font-size:.95rem;color:var(--warm-gray);margin-bottom:1.2rem}
+.pprice-row{display:flex;align-items:baseline;gap:.3rem}
+.pcur{font-family:var(--fu);font-size:1rem;font-weight:500;color:var(--walnut-light);margin-top:.3rem}
+.pprice{font-family:var(--fd);font-size:2.6rem;font-weight:700;color:var(--walnut);line-height:1}
+.pnote{font-family:var(--fu);font-size:.72rem;color:var(--warm-gray);margin-left:.4rem}
+.pbody{padding:1.8rem 2rem}
+.pfeats li{display:flex;align-items:flex-start;gap:.75rem;font-family:var(--fb);font-size:1rem;color:var(--charcoal);padding:.5rem 0;border-bottom:1px solid var(--cream-dark)}
+.pfeats li:last-child{border-bottom:none}
+.pfeats li.dim{color:var(--warm-gray)}
+.ck{color:var(--gold);font-size:.85rem;margin-top:.2rem;flex-shrink:0}
+.cx{color:#ccc;font-size:.85rem;margin-top:.2rem;flex-shrink:0}
+
+/* Bundles */
+#bundles{padding:6rem 0;background:var(--cream-dark)}
+.bh{text-align:center;margin-bottom:4rem}
+.bgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.bcard{background:var(--white);border-radius:6px;padding:2.5rem;border:1px solid var(--cream-dark);box-shadow:var(--sm);transition:var(--tr);display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start}
+.bcard:hover{border-color:var(--gold);box-shadow:var(--md);transform:translateY(-4px)}
+.bico{width:64px;height:64px;background:linear-gradient(135deg,var(--walnut-mid),var(--walnut));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}
+.bname{font-family:var(--fd);font-size:1.3rem;font-weight:700;color:var(--walnut);margin-bottom:.3rem}
+.bdesc{font-family:var(--fb);font-size:.95rem;color:var(--warm-gray);margin-bottom:1rem;line-height:1.6}
+.btags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.btag{font-family:var(--fu);font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--cream-dark);color:var(--walnut-light);padding:.28rem .75rem;border-radius:100px}
+.bpr{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.bprice{font-family:var(--fd);font-size:1.6rem;font-weight:700;color:var(--walnut)}
+.bprice small{font-size:.74rem;color:var(--warm-gray);font-family:var(--fu)}
+
+/* Compare table */
+#compare{padding:6rem 0;background:var(--walnut)}
+.ch{text-align:center;margin-bottom:4rem}
+.ch .ttl{color:var(--cream)} .ch .sub{color:rgba(248,242,232,.6);margin-inline:auto;max-width:520px}
+.ctw{overflow-x:auto}
+.ct{width:100%;border-collapse:collapse;background:rgba(255,255,255,.04);border-radius:6px;overflow:hidden}
+.ct th,.ct td{padding:1rem 1.2rem;text-align:center;border-bottom:1px solid rgba(200,150,74,.12);font-family:var(--fu)}
+.ct th{font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(200,150,74,.08);padding:1.3rem 1.2rem}
+.ct th.fc,.ct td.fc{text-align:left}
+.ct td{font-size:.88rem;color:rgba(248,242,232,.7)}
+.ct td.fc{color:var(--cream);font-weight:500}
+.ct tr:last-child td{border-bottom:none}
+.ct tr:hover td{background:rgba(200,150,74,.05)}
+.ct .hl{background:rgba(200,150,74,.06)}
+.ck2{color:var(--gold)} .cx2{color:rgba(248,242,232,.2)}
+
+/* FAQ */
+#faq{padding:6rem 0;background:var(--cream)}
+.fh{text-align:center;margin-bottom:4rem}
+.fl{max-width:740px;margin-inline:auto}
+.fi{border:1px solid var(--cream-dark);border-radius:4px;margin-bottom:.8rem;overflow:hidden;background:var(--white);transition:var(--tr)}
+.fi.o{border-color:var(--gold);box-shadow:var(--sm)}
+.fq{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.3rem 1.5rem;cursor:pointer;font-family:var(--fu);font-size:.88rem;font-weight:500;color:var(--walnut);transition:var(--tr)}
+.fq:hover{color:var(--gold)}
+.ficon{width:28px;height:28px;border-radius:50%;border:1px solid var(--cream-dark);display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--walnut-light);transition:var(--tr);flex-shrink:0}
+.fi.o .ficon{background:var(--gold);border-color:var(--gold);color:var(--walnut);transform:rotate(45deg)}
+.fa2{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;font-family:var(--fb);font-size:1rem;color:var(--warm-gray);padding:0 1.5rem;line-height:1.75}
+.fi.o .fa2{max-height:300px;padding:0 1.5rem 1.3rem}
+
+/* CTA */
+#cta{padding:6rem 0;background:linear-gradient(135deg,var(--charcoal) 0%,var(--walnut) 100%);text-align:center;position:relative;overflow:hidden}
+#cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 80% at 50% 50%,rgba(200,150,74,.12) 0%,transparent 70%)}
+.ci{position:relative;z-index:1}
+.ct2{font-family:var(--fd);font-size:clamp(1.8rem,4vw,3rem);color:var(--cream);font-weight:700;margin-bottom:1rem}
+.ct2 em{font-style:italic;color:var(--gold)}
+.cs{font-family:var(--fb);font-size:1.1rem;color:rgba(248,242,232,.65);margin-bottom:2.5rem}
+.cbtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.cph{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--fu);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:2px solid var(--gold);padding:.88rem 2rem;border-radius:2px;transition:var(--tr)}
+.cph:hover{background:var(--gold);color:var(--walnut);transform:translateY(-2px)}
+
+/* Footer */
+#ft{background:var(--charcoal);padding:3rem 0;text-align:center}
+.flogo{font-family:var(--fd);font-size:1.5rem;font-weight:700;color:var(--cream);margin-bottom:.3rem} .flogo span{color:var(--gold)}
+.fsub{font-family:var(--fu);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.5rem}
+.flinks{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.flinks a{font-family:var(--fu);font-size:.77rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(248,242,232,.45);transition:var(--tr)}
+.flinks a:hover{color:var(--gold-light)}
+.fcopy{font-family:var(--fu);font-size:.73rem;color:rgba(248,242,232,.3);letter-spacing:.05em}
+
+/* Floats */
+#waf{position:fixed;bottom:2rem;left:2rem;width:52px;height:52px;background:#25D366;color:#fff;border:none;border-radius:50%;font-size:1.5rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:var(--tr)}
+#waf:hover{transform:scale(1.1)}
+#btt{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;background:var(--walnut);color:var(--cream);border:none;border-radius:50%;font-size:1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;box-shadow:var(--md);opacity:0;transform:translateY(20px);transition:var(--tr)}
+#btt.s{opacity:1;transform:translateY(0)} #btt:hover{background:var(--gold);color:var(--walnut)}
+
+/* Reveal */
+@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
+
+/* Responsive */
+@media(max-width:1024px){.pgrid{grid-template-columns:repeat(2,1fr)}.pc.feat{transform:none}.pc.feat:hover{transform:translateY(-6px)}.bgrid{grid-template-columns:1fr}}
+@media(max-width:768px){.nlinks{display:none}.ntog{display:flex}.pgrid{grid-template-columns:1fr}.ct th,.ct td{padding:.8rem;font-size:.77rem}.bcard{grid-template-columns:1fr}.cbtns{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+
+<div id="pre"><div class="pre-logo">K.<span>Appiah</span> Decor</div><div class="pre-bar"></div></div>
+
+<nav id="nav">
+  <div class="container ni">
+    <a href="index.html" class="nl"><span class="nl-m">K.<span>Appiah</span> Decor</span><span class="nl-s">Fine Furniture &amp; Interiors</span></a>
+    <ul class="nlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="packages.html" class="act">Packages</a></li>
+      <li><a href="contact.html" class="ncta">Get a Quote</a></li>
+    </ul>
+    <div class="ntog" id="tog"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="nmob" id="mob">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="products.html">Products</a><a href="contact.html">Contact</a>
+  <a href="packages.html">Packages</a><a href="contact.html">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container"><div class="hi">
+    <div class="heb"><span>Packages &amp; Pricing</span></div>
+    <h1 class="ht">Furniture Packages<br/><em>For Every Home</em></h1>
+    <p class="hs">Choose from our carefully crafted packages — starter, classic, or luxury — or let us build a bespoke bundle tailored to your space and budget.</p>
+    <div class="hbadges">
+      <span class="hbadge"><i class="fa-solid fa-star"></i> Custom Made</span>
+      <span class="hbadge"><i class="fa-solid fa-truck"></i> Delivery Included</span>
+      <span class="hbadge"><i class="fa-solid fa-shield-halved"></i> Quality Guaranteed</span>
+      <span class="hbadge"><i class="fa-solid fa-handshake"></i> Flexible Payment</span>
+    </div>
+  </div></div>
+</section>
+
+<!-- TOGGLE -->
+<div id="togbar">
+  <div class="tw">
+    <span class="tlbl on" id="lm">Standard</span>
+    <button class="tsw" id="tsw"></button>
+    <span class="tlbl" id="la">Premium Wood</span>
+    <span class="tsave">Save 15%</span>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<section id="pkgs">
+  <div class="container">
+    <div class="ph rv"><span class="lbl">Our Plans</span><h2 class="ttl">Choose Your Package</h2><p class="sub">All packages include free consultation, custom sizing, and professional installation. Prices are starting guides.</p></div>
+
+    <div class="filters rv d1">
+      <button class="fb on" data-f="all">All Packages</button>
+      <button class="fb" data-f="bedroom">Bedroom</button>
+      <button class="fb" data-f="kitchen">Kitchen</button>
+      <button class="fb" data-f="living">Living Room</button>
+      <button class="fb" data-f="full">Full Home</button>
+    </div>
+
+    <div class="pgrid">
+
+      <div class="pc show" data-cat="bedroom">
+        <div class="phead"><div class="pico">🛏️</div><div class="pname">Bedroom Starter</div><div class="ptag">Everything for a complete bedroom</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="3500" data-p="2975">3,500</span><span class="pnote">starting price</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × Single/Double Bed Frame</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × 2-Door Wardrobe</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × Bedside Table</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Standard wood finish</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Delivery &amp; Installation</li>
+          <li class="dim"><span class="cx"><i class="fa-solid fa-xmark"></i></span>Mirror / Dresser</li>
+          <li class="dim"><span class="cx"><i class="fa-solid fa-xmark"></i></span>Study Desk</li>
+        </ul><a href="contact.html" class="btn btn-ol btn-full">Get This Package</a></div>
+      </div>
+
+      <div class="pc show feat" data-cat="bedroom">
+        <span class="pbadge bp">Most Popular</span>
+        <div class="phead"><div class="pico">🏠</div><div class="pname">Bedroom Classic</div><div class="ptag">A fully furnished bedroom with style</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="6200" data-p="5270">6,200</span><span class="pnote">starting price</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × Queen/King Bed Frame</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × 3-Door Wardrobe with mirror</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>2 × Bedside Tables</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × Dresser/Vanity Unit</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Premium wood finish</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Delivery &amp; Installation</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1-year warranty</li>
+        </ul><a href="contact.html" class="btn btn-gold btn-full">Get This Package</a></div>
+      </div>
+
+      <div class="pc show" data-cat="bedroom">
+        <span class="pbadge bv">Premium</span>
+        <div class="phead"><div class="pico">👑</div><div class="pname">Master Suite</div><div class="ptag">Hotel-level luxury for your bedroom</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="10500" data-p="8925">10,500</span><span class="pnote">starting price</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × King Bed with headboard</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Walk-in wardrobe / fitted unit</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>2 × Luxury bedside tables</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Full dresser &amp; mirror set</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Study desk &amp; shelving</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Hardwood premium finish</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>2-year warranty</li>
+        </ul><a href="contact.html" class="btn btn-dark btn-full">Get This Package</a></div>
+      </div>
+
+      <div class="pc show" data-cat="kitchen">
+        <div class="phead"><div class="pico">🍳</div><div class="pname">Kitchen Starter</div><div class="ptag">Clean, functional kitchen cabinets</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="4800" data-p="4080">4,800</span><span class="pnote">starting price</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Upper &amp; lower cabinets (up to 3m)</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Standard hinges &amp; handles</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × Drawer unit</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Standard finish</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Installation included</li>
+          <li class="dim"><span class="cx"><i class="fa-solid fa-xmark"></i></span>Island unit</li>
+        </ul><a href="contact.html" class="btn btn-ol btn-full">Get This Package</a></div>
+      </div>
+
+      <div class="pc show feat" data-cat="kitchen">
+        <span class="pbadge bp">Best Value</span>
+        <div class="phead"><div class="pico">🔪</div><div class="pname">Kitchen Pro</div><div class="ptag">Complete kitchen transformation</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="8500" data-p="7225">8,500</span><span class="pnote">starting price</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Full cabinets up to 6m</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Soft-close hinges &amp; drawers</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × Island / breakfast bar</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Premium laminate or veneer</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Pantry / storage unit</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Full installation &amp; finishing</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1-year warranty</li>
+        </ul><a href="contact.html" class="btn btn-gold btn-full">Get This Package</a></div>
+      </div>
+
+      <div class="pc show" data-cat="living">
+        <span class="pbadge bn">New</span>
+        <div class="phead"><div class="pico">📺</div><div class="pname">Living Room Set</div><div class="ptag">TV unit, shelving &amp; storage</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="4200" data-p="3570">4,200</span><span class="pnote">starting price</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × TV Stand / Entertainment Unit</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × Wall shelving unit</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>1 × Display / storage cabinet</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Custom size &amp; finish</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Delivery &amp; Installation</li>
+          <li class="dim"><span class="cx"><i class="fa-solid fa-xmark"></i></span>Coffee / side tables</li>
+        </ul><a href="contact.html" class="btn btn-ol btn-full">Get This Package</a></div>
+      </div>
+
+      <div class="pc show" data-cat="full">
+        <div class="phead"><div class="pico">🏡</div><div class="pname">Home Starter Bundle</div><div class="ptag">Multi-room furniture for a new home</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="14000" data-p="11900">14,000</span><span class="pnote">starting price</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Bedroom Starter set</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Kitchen Starter cabinets</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>TV Stand &amp; shelving</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>10% multi-room discount</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Full delivery &amp; installation</li>
+        </ul><a href="contact.html" class="btn btn-dark btn-full">Get This Package</a></div>
+      </div>
+
+      <div class="pc show feat" data-cat="full">
+        <span class="pbadge bp">Top Pick</span>
+        <div class="phead"><div class="pico">✨</div><div class="pname">Full Home Premium</div><div class="ptag">Complete furniture for your entire home</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="22000" data-p="18700">22,000</span><span class="pnote">starting price</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Bedroom Classic set</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Kitchen Pro cabinets</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Full living room set</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Guest bedroom basics</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>15% multi-room discount</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Priority production &amp; delivery</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>2-year warranty on all items</li>
+        </ul><a href="contact.html" class="btn btn-gold btn-full">Get This Package</a></div>
+      </div>
+
+      <div class="pc show" data-cat="full">
+        <span class="pbadge bv">Custom</span>
+        <div class="phead"><div class="pico">✏️</div><div class="pname">Bespoke Build</div><div class="ptag">Your design. Your specs. Your price.</div>
+        <div class="pprice-row"><span class="pcur">GH₵</span><span class="pprice" data-s="—" data-p="—">—</span><span class="pnote">custom quote</span></div></div>
+        <div class="pbody"><ul class="pfeats">
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Any product combination</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Your own design / sketch</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Any wood species or finish</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Site measurement visit</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Transparent itemised quote</li>
+          <li><span class="ck"><i class="fa-solid fa-check"></i></span>Full installation &amp; aftercare</li>
+        </ul><a href="tel:0247104145" class="btn btn-dark btn-full"><i class="fa-solid fa-phone"></i> Call for Quote</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BUNDLES -->
+<section id="bundles">
+  <div class="container">
+    <div class="bh"><span class="lbl rv">Special Deals</span><h2 class="ttl rv d1">Popular Bundle Deals</h2><p class="sub rv d2" style="max-width:560px;margin-inline:auto;">Save more when you combine products. These are our most requested combinations.</p></div>
+    <div class="bgrid">
+      <div class="bcard rv"><div class="bico">🛏️</div><div><div class="bname">Newlywed Bundle</div><div class="bdesc">Everything a couple needs to set up their first bedroom — bed, wardrobe, bedside tables and dresser, all matching.</div><div class="btags"><span class="btag">King Bed</span><span class="btag">Wardrobe</span><span class="btag">2× Bedside</span><span class="btag">Dresser</span></div><div class="bpr"><div class="bprice">GH₵ 7,800 <small>starting</small></div><a href="contact.html" class="btn btn-gold">Order Now</a></div></div></div>
+      <div class="bcard rv d1"><div class="bico">🍳</div><div><div class="bname">Kitchen &amp; Dining Bundle</div><div class="bdesc">Complete kitchen cabinets plus a matching dining table and chairs — perfect for open-plan homes.</div><div class="btags"><span class="btag">Kitchen Cabinets</span><span class="btag">Dining Table</span><span class="btag">4 Chairs</span></div><div class="bpr"><div class="bprice">GH₵ 9,500 <small>starting</small></div><a href="contact.html" class="btn btn-gold">Order Now</a></div></div></div>
+      <div class="bcard rv d2"><div class="bico">📺</div><div><div class="bname">Living Room Bundle</div><div class="bdesc">TV stand, wall shelves, display cabinet and coffee table — a complete, cohesive living room set.</div><div class="btags"><span class="btag">TV Stand</span><span class="btag">Wall Shelf</span><span class="btag">Cabinet</span><span class="btag">Coffee Table</span></div><div class="bpr"><div class="bprice">GH₵ 5,600 <small>starting</small></div><a href="contact.html" class="btn btn-gold">Order Now</a></div></div></div>
+      <div class="bcard rv d3"><div class="bico">🧸</div><div><div class="bname">Children's Room Bundle</div><div class="bdesc">Safe, durable furniture for kids — single bed, wardrobe, study desk and shelving unit, child-safe finished.</div><div class="btags"><span class="btag">Single Bed</span><span class="btag">Wardrobe</span><span class="btag">Study Desk</span><span class="btag">Shelf Unit</span></div><div class="bpr"><div class="bprice">GH₵ 4,400 <small>starting</small></div><a href="contact.html" class="btn btn-gold">Order Now</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE TABLE -->
+<section id="compare">
+  <div class="container">
+    <div class="ch"><span class="lbl rv">Side by Side</span><h2 class="ttl rv d1">Bedroom Package Comparison</h2><p class="sub rv d2">Not sure which bedroom package suits you? Here's a full breakdown.</p></div>
+    <div class="ctw rv">
+      <table class="ct">
+        <thead><tr><th class="fc">Feature</th><th>Bedroom Starter</th><th class="hl">Bedroom Classic</th><th>Master Suite</th></tr></thead>
+        <tbody>
+          <tr><td class="fc">Bed Frame Size</td><td>Single / Double</td><td class="hl">Queen / King</td><td>King + Headboard</td></tr>
+          <tr><td class="fc">Wardrobe Doors</td><td>2-door</td><td class="hl">3-door + mirror</td><td>Walk-in / Fitted</td></tr>
+          <tr><td class="fc">Bedside Tables</td><td>1 table</td><td class="hl">2 tables</td><td>2 luxury tables</td></tr>
+          <tr><td class="fc">Dresser / Vanity</td><td><span class="cx2"><i class="fa-solid fa-xmark"></i></span></td><td class="hl"><span class="ck2"><i class="fa-solid fa-check"></i></span></td><td><span class="ck2"><i class="fa-solid fa-check"></i></span> Full set</td></tr>
+          <tr><td class="fc">Study Desk</td><td><span class="cx2"><i class="fa-solid fa-xmark"></i></span></td><td class="hl"><span class="cx2"><i class="fa-solid fa-xmark"></i></span></td><td><span class="ck2"><i class="fa-solid fa-check"></i></span></td></tr>
+          <tr><td class="fc">Wood Finish</td><td>Standard</td><td class="hl">Premium (3 options)</td><td>Hardwood (all)</td></tr>
+          <tr><td class="fc">Delivery &amp; Install</td><td><span class="ck2"><i class="fa-solid fa-check"></i></span></td><td class="hl"><span class="ck2"><i class="fa-solid fa-check"></i></span></td><td><span class="ck2"><i class="fa-solid fa-check"></i></span></td></tr>
+          <tr><td class="fc">Warranty</td><td>6 months</td><td class="hl">1 year</td><td>2 years</td></tr>
+          <tr><td class="fc">Starting Price</td><td>GH₵ 3,500</td><td class="hl">GH₵ 6,200</td><td>GH₵ 10,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="fh"><span class="lbl rv">Questions</span><h2 class="ttl rv d1">Frequently Asked Questions</h2></div>
+    <div class="fl">
+      <div class="fi rv"><div class="fq">Are prices fixed or can they change?<span class="ficon"><i class="fa-solid fa-plus"></i></span></div><div class="fa2">The prices shown are starting guides. Your final quote depends on your exact measurements, wood species, finish and any modifications. We always provide a detailed, itemised quote before work begins — no hidden costs.</div></div>
+      <div class="fi rv d1"><div class="fq">How long does production take?<span class="ficon"><i class="fa-solid fa-plus"></i></span></div><div class="fa2">Typically 2–6 weeks depending on the package and complexity. We'll confirm your exact timeline after consultation and deposit. Full Home Premium packages get priority scheduling.</div></div>
+      <div class="fi rv d2"><div class="fq">Can I mix items from different packages?<span class="ficon"><i class="fa-solid fa-plus"></i></span></div><div class="fa2">Absolutely! Packages are guides, not rigid rules. You can mix, match, add or remove items. Just call or message us and we'll build a custom quote around your exact needs.</div></div>
+      <div class="fi rv"><div class="fq">What is the payment structure?<span class="ficon"><i class="fa-solid fa-plus"></i></span></div><div class="fa2">We require a 50% deposit to commence production, with the remaining 50% due upon delivery and installation. For larger Full Home packages, flexible payment plans can be discussed — call 0247 104 145.</div></div>
+      <div class="fi rv d1"><div class="fq">Do you deliver outside Kumasi?<span class="ficon"><i class="fa-solid fa-plus"></i></span></div><div class="fa2">Yes! We deliver across the Ashanti Region and can arrange delivery to other regions for larger orders. Delivery costs outside Kumasi will be quoted transparently upfront.</div></div>
+      <div class="fi rv d2"><div class="fq">What does "Premium Wood" pricing mean?<span class="ficon"><i class="fa-solid fa-plus"></i></span></div><div class="fa2">Toggling to "Premium Wood" shows the discounted price for upgrading to hardwood species like mahogany or teak. You save 15% compared to ordering the upgrade separately.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container ci">
+    <h2 class="ct2 rv">Not Sure Which Package <em>Is Right for You?</em></h2>
+    <p class="cs rv d1">Call us for a free, no-obligation consultation. We'll visit your space and recommend the perfect solution.</p>
+    <div class="cbtns rv d2">
+      <a href="contact.html" class="btn btn-gold"><i class="fa-solid fa-envelope"></i> Send Enquiry</a>
+      <a href="tel:0247104145" class="cph"><i class="fa-solid fa-phone"></i> 0247 104 145</a>
+      <a href="index.html" class="btn btn-ol" style="color:var(--cream);border-color:rgba(248,242,232,.4)"><i class="fa-solid fa-arrow-left"></i> Back to Site</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="ft">
+  <div class="container">
+    <div class="flogo">K.<span>Appiah</span> Decor</div>
+    <div class="fsub">Fine Furniture &amp; Interiors · Pankrono-Estate, Kumasi</div>
+    <div class="flinks">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="products.html">Products</a><a href="packages.html">Packages</a>
+      <a href="contact.html">Contact</a><a href="tel:0247104145">0247 104 145</a>
+    </div>
+    <p class="fcopy">&copy; 2025 K.Appiah Decor. All rights reserved.</p>
+  </div>
+</footer>
+
+<button id="waf" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+<button id="btt" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  // Preloader
+  setTimeout(()=>document.getElementById('pre').classList.add('gone'),1800);
+
+  // Navbar
+  const nav=document.getElementById('nav'),btt=document.getElementById('btt');
+  window.addEventListener('scroll',()=>{
+    nav.classList.toggle('s',scrollY>50);
+    btt.classList.toggle('s',scrollY>500);
+  });
+
+  // Mobile toggle
+  const tog=document.getElementById('tog'),mob=document.getElementById('mob');
+  tog.addEventListener('click',()=>{
+    const o=mob.classList.toggle('o');
+    const sp=tog.querySelectorAll('span');
+    sp[0].style.transform=o?'rotate(45deg) translate(5px,5px)':'';
+    sp[1].style.opacity=o?'0':'';
+    sp[2].style.transform=o?'rotate(-45deg) translate(5px,-5px)':'';
+  });
+  mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    mob.classList.remove('o');
+    tog.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity='';});
+  }));
+
+  // Back to top
+  btt.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+  // WhatsApp
+  document.getElementById('waf').addEventListener('click',()=>{
+    open(`https://wa.me/233247104145?text=${encodeURIComponent("Hello K.Appiah Decor! I'm interested in one of your packages.")},'_blank'`);
+  });
+
+  // Scroll reveal
+  const rvs=document.querySelectorAll('.rv');
+  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:.12});
+  rvs.forEach(el=>obs.observe(el));
+
+  // Billing toggle
+  let isPrem=false;
+  const tsw=document.getElementById('tsw'),lm=document.getElementById('lm'),la=document.getElementById('la');
+  tsw.addEventListener('click',()=>{
+    isPrem=!isPrem;
+    tsw.classList.toggle('ann',isPrem);
+    lm.classList.toggle('on',!isPrem);
+    la.classList.toggle('on',isPrem);
+    document.querySelectorAll('.pprice[data-s]').forEach(el=>{
+      const v=isPrem?el.dataset.p:el.dataset.s;
+      if(v==='—'){el.textContent='—';return;}
+      el.textContent=parseInt(v).toLocaleString();
+    });
+  });
+
+  // Filter tabs
+  document.querySelectorAll('.fb').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+      btn.classList.add('on');
+      const f=btn.dataset.f;
+      document.querySelectorAll('.pc').forEach(card=>{
+        card.classList.toggle('show',f==='all'||card.dataset.cat===f);
+      });
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.fi').forEach(item=>{
+    item.querySelector('.fq').addEventListener('click',()=>{
+      const o=item.classList.contains('o');
+      document.querySelectorAll('.fi').forEach(i=>i.classList.remove('o'));
+      if(!o)item.classList.add('o');
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',function(e){
+      const t=document.querySelector(this.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+    });
+  });
+});
+</script>
+</body>
+</html>
