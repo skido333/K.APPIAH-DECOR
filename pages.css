@@ -90,7 +90,7 @@
 .prod-card { background: var(--white); border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--trans); }
 .prod-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .prod-card:hover .prod-img-inner { transform: scale(1.06); }
-.prod-img { height: 100px; overflow: hidden; position: relative; }
+.prod-img {width:100%; height: 320px; overflow: hidden; position: relative; background: #000; }
 .prod-img-inner { width: 100%; height: 100%; transition: transform 0.5s ease; display: flex; align-items: center; justify-content: center; }
 .prod-img-inner.c1 { background: linear-gradient(135deg,#5C3A1E,#8B5E3C); }
 .prod-img-inner.c2 { background: linear-gradient(135deg,#3A2A1A,#6B4A2A); }
