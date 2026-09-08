@@ -4,10 +4,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── Preloader ─────────────────────────────────────────── */
-  const preloader = document.getElementById('preloader');
-  if (preloader) setTimeout(() => preloader.classList.add('hidden'), 1900);
-
+/* ── Preloader ─────────────────────────────────────────── */
+const preloader = document.getElementById('preloader');
+if (preloader) {
+  if (sessionStorage.getItem('kad_visited')) {
+    // already seen it this session — skip straight to hidden, no delay
+    preloader.classList.add('hidden');
+  } else {
+    sessionStorage.setItem('kad_visited', 'true');
+    setTimeout(() => preloader.classList.add('hidden'), 1900);
+  }
+}
   /* ── Navbar scroll ─────────────────────────────────────── */
   const navbar = document.getElementById('navbar');
   const backTop = document.getElementById('back-top');
